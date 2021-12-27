@@ -6,4 +6,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+# Sqlite database
+db.sqlite3
 
