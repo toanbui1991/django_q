@@ -1,0 +1,28 @@
+//docker run multiple in redis, save snapshot every 60 seconds if at least 1 operation
+docker run -d \
+    --name redis \
+    -p 6379:6379 \
+    -v /volume/redis:/data \
+    redis redis-server --save 60 1 --loglevel warning
+######################################
+//docker run with multiple lines
+docker run -d \
+    -p 5432:5432 \
+    --name postgres \
+    -e POSTGRES_USER=toanbui1991 \
+    -e POSTGRES_PASSWORD=Buixuantoan@916263 \
+    -e POSTGRES_DB=postgresdb \
+    -e PGDATA=/var/lib/postgresql/data/pgdata \
+    -v /volumes/postgres_data:/var/lib/postgresql/data \
+    postgres
+#######################################################
+//mysql run with multiple lines
+docker run -d \
+    -p 3306:3306 \
+    --name mysql \
+    -v /volumes/mysql_data:/var/lib/mysql \
+    -e MYSQL_ROOT_PASSWORD=Buixuantoan@916263 \
+    -e MYSQL_DATABASE=mysqldb \
+    -e MYSQL_USER=toanbui1991 \
+    -e MYSQL_PASSWORD=Buixuantoan@916263 \
+    mysql
